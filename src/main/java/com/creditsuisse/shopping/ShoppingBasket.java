@@ -9,6 +9,9 @@ public class ShoppingBasket {
 			if(item.equals("Apple")) {
 				totalCost += 35;
 			}
+			else if (item.equals("Banana")) {
+				totalCost +=20;
+			}
 		}
 		return totalCost;
 	}
