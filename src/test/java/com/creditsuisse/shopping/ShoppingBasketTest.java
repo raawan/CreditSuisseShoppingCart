@@ -35,4 +35,11 @@ public class ShoppingBasketTest {
 		String itemsInBasket[] = {"Apple","Apple"};
 		assertEquals(70, shoppingBasket.totalCost(itemsInBasket));
 	}
+	
+	@Test
+	public void givenBasketWithTwoApplesAndOneBananaTotalCostReturnedShouldBe90p() {
+		
+		String itemsInBasket[] = {"Apple","Banana","Apple"};
+		assertEquals(90, shoppingBasket.totalCost(itemsInBasket));
+	}
 }
