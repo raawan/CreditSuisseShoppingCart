@@ -13,4 +13,10 @@ public class Banana extends Fruit {
 		
 		return "banana";
 	}
+
+	@Override
+	public int calculateCostForNunits(int totalFruits) {
+		// TODO Auto-generated method stub
+		return 0;
+	}
 }

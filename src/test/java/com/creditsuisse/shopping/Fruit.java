@@ -21,5 +21,6 @@ public abstract class Fruit {
 			int totalUnitsToBuyToGetFreeFruit) {
 		this.totalUnitsToBuyToGetFreeFruit = totalUnitsToBuyToGetFreeFruit;
 	}
-
+	
+	public abstract int calculateCostForNunits(int totalFruits);
 }
