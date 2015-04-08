@@ -3,7 +3,6 @@ package com.creditsuisse.shopping;
 import java.util.ArrayList;
 import java.util.List;
 
-import static com.creditsuisse.shopping.FruitCostCalculator.*;
 
 public class ShoppingBasket {
 	
@@ -26,9 +25,7 @@ public class ShoppingBasket {
 
 	private int calculateTotalCost() throws InvalidNumberOfMelonException {
 
-		return calculateCostForApples(totalApples) +
-				calculateCostForBananas(totalBananas) +
-				calculateCostForMelons(totalMelons);
+		return FruitCostCalculator.totalCost(totalApples,totalBananas,totalMelons);
 	}
 
 	private void createFruitList(String[] itemsInBasket) throws InvalidItemException {
