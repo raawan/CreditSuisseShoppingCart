@@ -1,13 +1,12 @@
 package com.creditsuisse.shopping;
 
-public class Banana extends Fruit {
+public class Banana extends Fruit implements FruitPrice {
 	
-	public static int BANANA_PRICE = 20;
-	public static int TOTAL_BANANAS_TO_BUY_TO_GET_A_FREE_BANANA = 0;
+	public static final int TOTAL_BANANAS_TO_BUY_TO_GET_A_FREE_BANANA = 0;
 	
 	Banana() {
 		
-		this.setPrice(BANANA_PRICE);
+		this.setPrice(FruitPrice.BANANA_PRICE);
 		this.setTotalUnitsToBuyToGetFreeFruit(TOTAL_BANANAS_TO_BUY_TO_GET_A_FREE_BANANA);
 	}
 	
