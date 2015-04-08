@@ -41,13 +41,13 @@ public class ShoppingBasket {
 		for(String item : itemsInBasket) {
 			if(item.equals("Apple")) {
 				fruitList.add(fruitFactory.createFruit("Apple"));
-				totalApples+=1;
+				//totalApples+=1;
 			} else if (item.equals("Banana")) {
 				fruitList.add(fruitFactory.createFruit("Banana"));
-				totalBananas+=1;
+				//totalBananas+=1;
 			} else if (item.equals("Melon")) {
 				fruitList.add(fruitFactory.createFruit("Melon"));
-				totalMelons+=1;
+				//totalMelons+=1;
 			}
 		}
 	}

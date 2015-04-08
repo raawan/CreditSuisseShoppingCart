@@ -2,9 +2,11 @@ package com.creditsuisse.shopping;
 
 public class Melon extends Fruit {
 	
-	Melon(int price, int totalUnitsToBuyToGetFreeFruit) {
+	public static int MELON_PRICE = 50;
+	
+	Melon(int totalUnitsToBuyToGetFreeFruit) {
 		
-		this.setPrice(price);
+		this.setPrice(MELON_PRICE);
 		this.setTotalUnitsToBuyToGetFreeFruit(totalUnitsToBuyToGetFreeFruit);
 	}
 	
@@ -14,12 +16,5 @@ public class Melon extends Fruit {
 		return "melon";
 	}
 
-	@Override
-	public int calculateCostForNunits(int totalFruits) {
-		
-		if(totalFruits>=2) {
-			return (totalFruits /2) * this.getPrice();
-		}
-		return 0;
-	}
+	
 }
