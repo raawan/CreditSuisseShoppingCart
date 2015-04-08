@@ -3,11 +3,12 @@ package com.creditsuisse.shopping;
 public class Apple extends Fruit {
 	
 	public static int APPLE_PRICE = 35;
+	public static int TOTAL_APPLES_TO_BUY_TO_GET_A_FREE_APPLE = 0;
 	
-	Apple(int totalUnitsToBuyToGetFreeFruit) {
+	Apple() {
 		
 		this.setPrice(APPLE_PRICE);
-		this.setTotalUnitsToBuyToGetFreeFruit(totalUnitsToBuyToGetFreeFruit);
+		this.setTotalUnitsToBuyToGetFreeFruit(TOTAL_APPLES_TO_BUY_TO_GET_A_FREE_APPLE);
 	}
 	
 	@Override
@@ -15,6 +16,5 @@ public class Apple extends Fruit {
 		
 		return "apple";
 	}
-
 	
 }

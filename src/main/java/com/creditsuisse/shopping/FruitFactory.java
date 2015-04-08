@@ -6,9 +6,9 @@ public class FruitFactory {
 		
 		fruit = fruit.toLowerCase();
 		switch(fruit) {
-			case "apple" 	: return new Apple(0);
-			case "banana" 	: return new Banana(0);
-			case "melon"	: return new Melon(1);
+			case "apple" 	: return new Apple();
+			case "banana" 	: return new Banana();
+			case "melon"	: return new Melon();
 			default			: return null;//ToDo : Null Object
 		}
 	}

@@ -5,10 +5,10 @@ public class Melon extends Fruit {
 	public static int MELON_PRICE = 50;
 	public static int TOTAL_MELONS_TO_BUY_TO_GET_A_FREE_MELON = 1;
 	
-	Melon(int totalUnitsToBuyToGetFreeFruit) {
+	Melon() {
 		
 		this.setPrice(MELON_PRICE);
-		this.setTotalUnitsToBuyToGetFreeFruit(totalUnitsToBuyToGetFreeFruit);
+		this.setTotalUnitsToBuyToGetFreeFruit(TOTAL_MELONS_TO_BUY_TO_GET_A_FREE_MELON);
 	}
 	
 	@Override
@@ -16,6 +16,5 @@ public class Melon extends Fruit {
 		
 		return "melon";
 	}
-
 	
 }
