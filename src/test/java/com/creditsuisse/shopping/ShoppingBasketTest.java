@@ -49,4 +49,11 @@ public class ShoppingBasketTest {
 		String itemsInBasket[] = {"Apple","Banana","Apple","Melon","Melon"};
 		assertEquals(140, shoppingBasket.totalCost(itemsInBasket));
 	}
+	
+	@Test (expected=InvalidItemException.class)
+	public void givenBasketListWithInvalidInputAnInvalidItemExceptionShouldBeThrown() throws InvalidItemException {
+		
+		String itemsInBasket[] = {"Apple","Banana","Apple","invalidItem"};
+		shoppingBasket.totalCost(itemsInBasket);
+	}
 }
