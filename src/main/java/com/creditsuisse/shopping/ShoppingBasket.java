@@ -18,7 +18,7 @@ public class ShoppingBasket {
 	
 	private List<Fruit> fruitList = new ArrayList<Fruit>();
 	
-	public int totalCost(String[] itemsInBasket) {
+	public int totalCost(String[] itemsInBasket) throws InvalidItemException {
 		
 		createFruitList(itemsInBasket);
 		return calculateTotalCost();
@@ -31,21 +31,25 @@ public class ShoppingBasket {
 				calculateCostForMelons(totalMelons);
 	}
 
-	private void createFruitList(String[] itemsInBasket) {
+	private void createFruitList(String[] itemsInBasket) throws InvalidItemException {
 
 		for(String item : itemsInBasket) {
-			if(item.equals("Apple")) {
-				fruitList.add(fruitFactory.createFruit("Apple"));
-				totalApples+=1;
-			} else if (item.equals("Banana")) {
-				fruitList.add(fruitFactory.createFruit("Banana"));
-				totalBananas+=1;
-			} else if (item.equals("Melon")) {
-				fruitList.add(fruitFactory.createFruit("Melon"));
-				totalMelons+=1;
+			item=item.toLowerCase();
+			switch(item) {
+				case "apple" 	: 	fruitList.add(fruitFactory.createFruit("Apple"));
+									totalApples++;
+									break;
+				case "banana" 	: 	fruitList.add(fruitFactory.createFruit("Banana"));
+									totalBananas++;
+									break;
+				case "melon"	: 	fruitList.add(fruitFactory.createFruit("Melon"));
+									totalMelons++;
+									break;
+				default			: 	throw new InvalidItemException("Invalid Item In the List");					
 			}
 		}
 	}
+
 	
 }
  

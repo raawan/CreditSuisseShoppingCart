@@ -23,28 +23,28 @@ public class ShoppingBasketTest {
 	}
 	
 	@Test
-	public void givenBasketWithOneAppleTotalCostReturnedShouldBe35p() {
+	public void givenBasketWithOneAppleTotalCostReturnedShouldBe35p() throws InvalidItemException {
 		
 		String itemsInBasket[] = {"Apple"};
 		assertEquals(35, shoppingBasket.totalCost(itemsInBasket));
 	}
 	
 	@Test
-	public void givenBasketWithTwoAppleTotalCostReturnedShouldBe70p() {
+	public void givenBasketWithTwoAppleTotalCostReturnedShouldBe70p() throws InvalidItemException {
 		
 		String itemsInBasket[] = {"Apple","Apple"};
 		assertEquals(70, shoppingBasket.totalCost(itemsInBasket));
 	}
 	
 	@Test
-	public void givenBasketWithTwoApplesAndOneBananaTotalCostReturnedShouldBe90p() {
+	public void givenBasketWithTwoApplesAndOneBananaTotalCostReturnedShouldBe90p() throws InvalidItemException {
 		
 		String itemsInBasket[] = {"Apple","Banana","Apple"};
 		assertEquals(90, shoppingBasket.totalCost(itemsInBasket));
 	}
 	
 	@Test
-	public void givenBasketWithTwoApplesTwoMelonsAndOneBananaTotalCostReturnedShouldBe140p() {
+	public void givenBasketWithTwoApplesTwoMelonsAndOneBananaTotalCostReturnedShouldBe140p() throws InvalidItemException {
 		
 		String itemsInBasket[] = {"Apple","Banana","Apple","Melon","Melon"};
 		assertEquals(140, shoppingBasket.totalCost(itemsInBasket));
