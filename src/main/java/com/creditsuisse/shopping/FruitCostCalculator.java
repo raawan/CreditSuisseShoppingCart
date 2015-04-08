@@ -17,10 +17,10 @@ public class FruitCostCalculator {
 	
 	private static int calculateCostForMelons(int totalMelons) throws InvalidNumberOfMelonException {
 		
-		if(totalMelons%(Melon.TOTAL_MELONS_TO_BUY_TO_GET_A_FREE_MELON+1)!=0){
+		if(totalMelons%(FruitDiscount.TOTAL_MELONS_TO_BUY_TO_GET_A_FREE_MELON+1)!=0){
 			throw new InvalidNumberOfMelonException("There is a free extra melon with every melon. Customer should get one more");
 		}
-		return (totalMelons /(Melon.TOTAL_MELONS_TO_BUY_TO_GET_A_FREE_MELON+1)) * MELON_PRICE;
+		return (totalMelons /(FruitDiscount.TOTAL_MELONS_TO_BUY_TO_GET_A_FREE_MELON+1)) * MELON_PRICE;
 	}
 	
 	public static int totalCost(int totalApples,int totalBananas,int totalMelons) throws InvalidNumberOfMelonException {
