@@ -1,7 +1,11 @@
 package com.creditsuisse.shopping;
 
+import java.util.ArrayList;
+import java.util.List;
 public class ShoppingBasket {
-
+	
+	private List<Fruit> fruitList = new ArrayList<Fruit>();
+	
 	public int totalCost(String[] itemsInBasket) {
 		
 		int totalCost = 0;
@@ -9,19 +13,30 @@ public class ShoppingBasket {
 		
 		for(String item : itemsInBasket) {
 			if(item.equals("Apple")) {
-				totalCost += 35;
+				fruitList.add(new Apple(35));
 			}
 			else if (item.equals("Banana")) {
-				totalCost +=20;
+				fruitList.add(new Banana(20));
 			} else if (item.equals("Melon")) {
-				totalMelons += 1;
+				fruitList.add(new Melon(50));
 			}
 		}
+		
+		for(Fruit fruit: fruitList) {
+			if(fruit.toString().equalsIgnoreCase("Melon")) {
+				totalMelons += 1;
+			} else {
+				totalCost += fruit.getPrice();	
+			}
+		}
+		
 		if(totalMelons>=2) {
 			int totalPriceToBeCharged = (totalMelons /2) * 50;
 			totalCost+=totalPriceToBeCharged;
 		}
+		
 		return totalCost;
 	}
 	
 }
+ 
