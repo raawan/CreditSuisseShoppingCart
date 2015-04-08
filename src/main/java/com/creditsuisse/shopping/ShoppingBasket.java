@@ -18,13 +18,13 @@ public class ShoppingBasket {
 	
 	private List<Fruit> fruitList = new ArrayList<Fruit>();
 	
-	public int totalCost(String[] itemsInBasket) throws InvalidItemException {
+	public int totalCost(String[] itemsInBasket) throws InvalidItemException, InvalidNumberOfMelonException {
 		
 		createFruitList(itemsInBasket);
 		return calculateTotalCost();
 	}
 
-	private int calculateTotalCost() {
+	private int calculateTotalCost() throws InvalidNumberOfMelonException {
 
 		return calculateCostForApples(totalApples) +
 				calculateCostForBananas(totalBananas) +

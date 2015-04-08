@@ -23,42 +23,42 @@ public class ShoppingBasketTest {
 	}
 	
 	@Test
-	public void givenBasketWithOneAppleTotalCostReturnedShouldBe35p() throws InvalidItemException {
+	public void givenBasketWithOneAppleTotalCostReturnedShouldBe35p() throws InvalidItemException, InvalidNumberOfMelonException {
 		
 		String itemsInBasket[] = {"Apple"};
 		assertEquals(35, shoppingBasket.totalCost(itemsInBasket));
 	}
 	
 	@Test
-	public void givenBasketWithTwoAppleTotalCostReturnedShouldBe70p() throws InvalidItemException {
+	public void givenBasketWithTwoAppleTotalCostReturnedShouldBe70p() throws InvalidItemException, InvalidNumberOfMelonException {
 		
 		String itemsInBasket[] = {"Apple","Apple"};
 		assertEquals(70, shoppingBasket.totalCost(itemsInBasket));
 	}
 	
 	@Test
-	public void givenBasketWithTwoApplesAndOneBananaTotalCostReturnedShouldBe90p() throws InvalidItemException {
+	public void givenBasketWithTwoApplesAndOneBananaTotalCostReturnedShouldBe90p() throws InvalidItemException, InvalidNumberOfMelonException {
 		
 		String itemsInBasket[] = {"Apple","Banana","Apple"};
 		assertEquals(90, shoppingBasket.totalCost(itemsInBasket));
 	}
 	
 	@Test
-	public void givenBasketWithTwoApplesTwoMelonsAndOneBananaTotalCostReturnedShouldBe140p() throws InvalidItemException {
+	public void givenBasketWithTwoApplesTwoMelonsAndOneBananaTotalCostReturnedShouldBe140p() throws InvalidItemException, InvalidNumberOfMelonException {
 		
 		String itemsInBasket[] = {"Apple","Banana","Apple","Melon","Melon"};
 		assertEquals(140, shoppingBasket.totalCost(itemsInBasket));
 	}
 	
 	@Test (expected=InvalidItemException.class)
-	public void givenBasketListWithInvalidInputAnInvalidItemExceptionShouldBeThrown() throws InvalidItemException {
+	public void givenBasketListWithInvalidInputAnInvalidItemExceptionShouldBeThrown() throws InvalidItemException, InvalidNumberOfMelonException {
 		
 		String itemsInBasket[] = {"Apple","Banana","Apple","invalidItem"};
 		shoppingBasket.totalCost(itemsInBasket);
 	}
 	
 	@Test (expected=InvalidNumberOfMelonException.class)
-	public void givenBasketWithThreeMelonsAnInvalidNumberOfMelonExceptionShouldBeThrown() throws InvalidItemException {
+	public void givenBasketWithThreeMelonsAnInvalidNumberOfMelonExceptionShouldBeThrown() throws InvalidItemException, InvalidNumberOfMelonException {
 		
 		String itemsInBasket[] = {"Melon","Melon","Melon"};
 		shoppingBasket.totalCost(itemsInBasket);
