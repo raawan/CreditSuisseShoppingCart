@@ -9,7 +9,7 @@ public class FruitFactory {
 			case "apple" 	: return new Apple(0);
 			case "banana" 	: return new Banana(0);
 			case "melon"	: return new Melon(1);
-			default			: return null;
+			default			: return null;//ToDo : Null Object
 		}
 	}
 }
