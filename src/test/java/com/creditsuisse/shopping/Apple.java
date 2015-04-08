@@ -2,9 +2,10 @@ package com.creditsuisse.shopping;
 
 public class Apple extends Fruit {
 
-	Apple(int price) {
+	Apple(int price, int totalUnitsToBuyToGetFreeFruit) {
 		
 		this.setPrice(price);
+		this.setTotalUnitsToBuyToGetFreeFruit(totalUnitsToBuyToGetFreeFruit);
 	}
 	
 	@Override
