@@ -3,8 +3,14 @@ package com.creditsuisse.shopping;
 public class ShoppingBasket {
 
 	public int totalCost(String[] itemsInBasket) {
-		return 35;
+		
+		int totalCost = 0;
+		for(String item : itemsInBasket) {
+			if(item.equals("Apple")) {
+				totalCost += 35;
+			}
+		}
+		return totalCost;
 	}
-	
 	
 }
