@@ -56,4 +56,11 @@ public class ShoppingBasketTest {
 		String itemsInBasket[] = {"Apple","Banana","Apple","invalidItem"};
 		shoppingBasket.totalCost(itemsInBasket);
 	}
+	
+	@Test (expected=InvalidNumberOfMelonException.class)
+	public void givenBasketWithThreeMelonsAnInvalidNumberOfMelonExceptionShouldBeThrown() throws InvalidItemException {
+		
+		String itemsInBasket[] = {"Melon","Melon","Melon"};
+		shoppingBasket.totalCost(itemsInBasket);
+	}
 }
