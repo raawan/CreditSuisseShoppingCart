@@ -13,7 +13,7 @@ public class ShoppingBasketTest {
 	@Before
 	public void setup() {
 		
-		shoppingBasket = new ShoppingBasket();
+		shoppingBasket = new ShoppingBasket(new FruitFactory());
 	}
 	
 	@After

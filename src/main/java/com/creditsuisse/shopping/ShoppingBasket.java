@@ -4,23 +4,18 @@ import java.util.ArrayList;
 import java.util.List;
 public class ShoppingBasket {
 	
+	FruitFactory fruitFactory;
+	ShoppingBasket(FruitFactory fruitFactory) {
+		this.fruitFactory = fruitFactory;
+	}
+	
 	private List<Fruit> fruitList = new ArrayList<Fruit>();
 	
 	public int totalCost(String[] itemsInBasket) {
 		
 		int totalCost = 0;
 		int totalMelons = 0;
-		
-		for(String item : itemsInBasket) {
-			if(item.equals("Apple")) {
-				fruitList.add(new Apple(35));
-			}
-			else if (item.equals("Banana")) {
-				fruitList.add(new Banana(20));
-			} else if (item.equals("Melon")) {
-				fruitList.add(new Melon(50));
-			}
-		}
+		createFruitList(itemsInBasket);
 		
 		for(Fruit fruit: fruitList) {
 			if(fruit.toString().equalsIgnoreCase("Melon")) {
@@ -36,6 +31,19 @@ public class ShoppingBasket {
 		}
 		
 		return totalCost;
+	}
+
+	private void createFruitList(String[] itemsInBasket) {
+
+		for(String item : itemsInBasket) {
+			if(item.equals("Apple")) {
+				fruitList.add(fruitFactory.createFruit("Apple"));
+			} else if (item.equals("Banana")) {
+				fruitList.add(fruitFactory.createFruit("Banana"));
+			} else if (item.equals("Melon")) {
+				fruitList.add(fruitFactory.createFruit("Melon"));
+			}
+		}
 	}
 	
 }
