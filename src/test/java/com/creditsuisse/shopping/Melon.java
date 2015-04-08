@@ -16,7 +16,10 @@ public class Melon extends Fruit {
 
 	@Override
 	public int calculateCostForNunits(int totalFruits) {
-		// TODO Auto-generated method stub
+		
+		if(totalFruits>=2) {
+			return (totalFruits /2) * this.getPrice();
+		}
 		return 0;
 	}
 }

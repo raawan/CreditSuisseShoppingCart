@@ -16,7 +16,7 @@ public class Banana extends Fruit {
 
 	@Override
 	public int calculateCostForNunits(int totalFruits) {
-		// TODO Auto-generated method stub
-		return 0;
+	
+		return totalFruits * this.getPrice();
 	}
 }
