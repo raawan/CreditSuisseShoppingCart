@@ -123,4 +123,11 @@ public class ShoppingBasketTest {
 		String itemsInBasket[] = {"Lime","Lime"};
 		assertEquals(15, shoppingBasket.totalCost(itemsInBasket));
 	}
+	
+	@Test
+	public void givenBasketWith4Limes2Melons2Bananas2ApplesTotalCostReturnedShould205p() throws FreeMelonRequiredException, InvalidItemException, FreeLimeRequiredException {
+		
+		String itemsInBasket[] = {"Lime","Lime","Lime","Lime","Melon","Melon","Banana","Banana","Apple","Apple"};
+		assertEquals(205, shoppingBasket.totalCost(itemsInBasket));
+	}
 }
