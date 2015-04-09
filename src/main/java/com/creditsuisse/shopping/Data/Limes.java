@@ -2,6 +2,7 @@ package com.creditsuisse.shopping.Data;
 
 import com.creditsuisse.shopping.constant.FruitDiscount;
 import com.creditsuisse.shopping.constant.FruitPrice;
+import com.creditsuisse.shopping.exception.FreeLimeRequiredException;
 import com.creditsuisse.shopping.exception.FreeMelonRequiredException;
 
 public class Limes extends FruitGroup {
@@ -15,14 +16,16 @@ public class Limes extends FruitGroup {
 
 	@Override
 	public int calculateTotalCostForNunits()
-			throws FreeMelonRequiredException {
+			throws FreeMelonRequiredException, FreeLimeRequiredException {
 		
 		if(areTotalLimesInMultipleOfThrees()) {
 			return (findHowManyLimeGroupsAreInMulipleOfThrees())*getDoublePrice();
 		} else if(IsThereAnExtraLimeAfterGroupingLimesInMultipleOfThrees()) {
 			return ((findHowManyLimeGroupsAreInMulipleOfThrees())*getDoublePrice()) + getPrice();
+		} else {
+			throw new FreeLimeRequiredException("there is a free lime on every two lime bought. ");
 		} 
-		return 0; // this is not required
+		
 	}
 
 	private boolean IsThereAnExtraLimeAfterGroupingLimesInMultipleOfThrees() {
