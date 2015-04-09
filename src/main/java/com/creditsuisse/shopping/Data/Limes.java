@@ -18,11 +18,26 @@ public class Limes extends FruitGroup {
 			throws InvalidNumberOfMelonException {
 		
 		if(areTotalLimesInMultipleOfThrees()) {
-			return (getTotalUnits()/3)*getPrice()*2;
-		} else if(getTotalUnits()%3 == 1) {
-			return ((getTotalUnits()/3)*getPrice()*2) + getPrice();
+			return (findHowManyLimeGroupsAreInMulipleOfThrees())*getDoublePrice();
+		} else if(IsThereAnExtraLimeAfterGroupingLimesInMultipleOfThrees()) {
+			return ((findHowManyLimeGroupsAreInMulipleOfThrees())*getDoublePrice()) + getPrice();
 		} 
 		return 0;
+	}
+
+	private boolean IsThereAnExtraLimeAfterGroupingLimesInMultipleOfThrees() {
+		
+		return getTotalUnits()%3 == 1;
+	}
+
+	private int getDoublePrice() {
+		
+		return getPrice()*2;
+	}
+
+	private int findHowManyLimeGroupsAreInMulipleOfThrees() {
+		
+		return getTotalUnits()/3;
 	}
 
 	private boolean areTotalLimesInMultipleOfThrees() {
