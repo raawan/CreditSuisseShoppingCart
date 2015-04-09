@@ -4,7 +4,8 @@ public abstract class Fruit {
 	
 	private int price;
 	private int totalUnitsToBuyToGetFreeFruit;
-
+	private int totalUnits;
+	
 	public int getPrice() {
 		return price;
 	}
@@ -21,5 +22,14 @@ public abstract class Fruit {
 			int totalUnitsToBuyToGetFreeFruit) {
 		this.totalUnitsToBuyToGetFreeFruit = totalUnitsToBuyToGetFreeFruit;
 	}
+
+	public int getTotalUnits() {
+		return totalUnits;
+	}
+
+	public void setTotalUnits(int totalUnits) {
+		this.totalUnits = totalUnits;
+	}
 	
+	public abstract int calculateTotalCostForNunits() throws InvalidNumberOfMelonException;
 }

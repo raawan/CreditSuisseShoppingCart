@@ -6,7 +6,8 @@ import java.util.List;
 
 public class ShoppingBasket {
 	
-	FruitFactory fruitFactory;
+	private List<Fruit> fruitGroupList = new ArrayList<Fruit>();
+	private FruitFactory fruitFactory;
 	private int totalMelons = 0;
 	private int totalApples = 0;
 	private int totalBananas = 0;
@@ -15,17 +16,23 @@ public class ShoppingBasket {
 		this.fruitFactory = fruitFactory;
 	}
 	
-	private List<Fruit> fruitList = new ArrayList<Fruit>();
-	
-	public int totalCost(String[] itemsInBasket) throws InvalidItemException, InvalidNumberOfMelonException {
+	public int totalCost(String[] itemsInBasket) throws InvalidNumberOfMelonException, InvalidItemException {
 		
 		createFruitList(itemsInBasket);
 		return calculateTotalCost();
 	}
 
 	private int calculateTotalCost() throws InvalidNumberOfMelonException {
-
-		return FruitCostCalculator.totalCost(totalApples,totalBananas,totalMelons);
+		
+		int totalCost = 0;
+		for(Fruit fruitGroup : fruitGroupList) {
+			if(fruitGroup == null) {
+				continue;
+			} else {
+				totalCost += fruitGroup.calculateTotalCostForNunits();
+			}
+		}
+		return totalCost;
 	}
 
 	private void createFruitList(String[] itemsInBasket) throws InvalidItemException {
@@ -33,18 +40,22 @@ public class ShoppingBasket {
 		for(String item : itemsInBasket) {
 			item=item.toLowerCase();
 			switch(item) {
-				case "apple" 	: 	fruitList.add(fruitFactory.createFruit("Apple"));
+				case "apple" 	: 	
 									totalApples++;
 									break;
-				case "banana" 	: 	fruitList.add(fruitFactory.createFruit("Banana"));
+				case "banana" 	: 	
 									totalBananas++;
 									break;
-				case "melon"	: 	fruitList.add(fruitFactory.createFruit("Melon"));
+				case "melon"	: 	
 									totalMelons++;
 									break;
 				default			: 	throw new InvalidItemException("Invalid Item In the List");					
 			}
 		}
+		fruitGroupList.add(fruitFactory.createFruitGroup("Apples",totalApples));
+		fruitGroupList.add(fruitFactory.createFruitGroup("Bananas",totalBananas));
+		fruitGroupList.add(fruitFactory.createFruitGroup("Melons",totalMelons));
+		
 	}
 
 	

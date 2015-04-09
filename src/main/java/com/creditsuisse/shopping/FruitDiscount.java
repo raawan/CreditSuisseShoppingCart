@@ -1,5 +1,8 @@
 package com.creditsuisse.shopping;
 
+/*
+ * This should ideally be a properties file
+ */
 public interface FruitDiscount {
 
 	public static final int TOTAL_MELONS_TO_BUY_TO_GET_A_FREE_MELON = 1;
