@@ -1,13 +1,13 @@
 package com.creditsuisse.shopping.exception;
 
-public class InvalidNumberOfMelonException extends Exception {
+public class FreeMelonRequiredException extends Exception {
 
 	/**
 	 * 
 	 */
 	private static final long serialVersionUID = -1978900443209641819L;
 	
-	public InvalidNumberOfMelonException(String msg) {
+	public FreeMelonRequiredException(String msg) {
 		super(msg);
 	}
 }

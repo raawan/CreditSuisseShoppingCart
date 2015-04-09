@@ -1,6 +1,6 @@
 package com.creditsuisse.shopping.Data;
 
-import com.creditsuisse.shopping.exception.InvalidNumberOfMelonException;
+import com.creditsuisse.shopping.exception.FreeMelonRequiredException;
 
 public abstract class FruitGroup {
 	
@@ -33,5 +33,5 @@ public abstract class FruitGroup {
 		this.totalUnits = totalUnits;
 	}
 	
-	public abstract int calculateTotalCostForNunits() throws InvalidNumberOfMelonException;
+	public abstract int calculateTotalCostForNunits() throws FreeMelonRequiredException;
 }

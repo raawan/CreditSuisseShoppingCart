@@ -3,7 +3,7 @@ package com.creditsuisse.shopping.Data;
 
 import com.creditsuisse.shopping.constant.FruitDiscount;
 import com.creditsuisse.shopping.constant.FruitPrice;
-import com.creditsuisse.shopping.exception.InvalidNumberOfMelonException;
+import com.creditsuisse.shopping.exception.FreeMelonRequiredException;
 
 public class Melons extends FruitGroup {
 	
@@ -16,10 +16,10 @@ public class Melons extends FruitGroup {
 	
 
 	@Override
-	public int calculateTotalCostForNunits() throws InvalidNumberOfMelonException {
+	public int calculateTotalCostForNunits() throws FreeMelonRequiredException {
 		
 		if(getTotalUnits()%(getTotalUnitsToBuyToGetFreeFruit()+1)!=0){
-			throw new InvalidNumberOfMelonException("There is a free extra melon with every melon. Customer should get one more");
+			throw new FreeMelonRequiredException("There is a free extra melon with every melon. Customer should get one more");
 		}
 		return (getTotalUnits() /(getTotalUnitsToBuyToGetFreeFruit()+1)) * getPrice();
 	}

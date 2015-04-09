@@ -2,7 +2,7 @@ package com.creditsuisse.shopping.Data;
 
 import com.creditsuisse.shopping.constant.FruitDiscount;
 import com.creditsuisse.shopping.constant.FruitPrice;
-import com.creditsuisse.shopping.exception.InvalidNumberOfMelonException;
+import com.creditsuisse.shopping.exception.FreeMelonRequiredException;
 
 public class Limes extends FruitGroup {
 	
@@ -15,7 +15,7 @@ public class Limes extends FruitGroup {
 
 	@Override
 	public int calculateTotalCostForNunits()
-			throws InvalidNumberOfMelonException {
+			throws FreeMelonRequiredException {
 		
 		if(areTotalLimesInMultipleOfThrees()) {
 			return (findHowManyLimeGroupsAreInMulipleOfThrees())*getDoublePrice();

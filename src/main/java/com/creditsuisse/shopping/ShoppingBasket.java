@@ -6,7 +6,7 @@ import java.util.List;
 import com.creditsuisse.shopping.Data.FruitFactory;
 import com.creditsuisse.shopping.Data.FruitGroup;
 import com.creditsuisse.shopping.exception.InvalidItemException;
-import com.creditsuisse.shopping.exception.InvalidNumberOfMelonException;
+import com.creditsuisse.shopping.exception.FreeMelonRequiredException;
 
 
 public class ShoppingBasket {
@@ -18,13 +18,13 @@ public class ShoppingBasket {
 		this.fruitFactory = fruitFactory;
 	}
 	
-	public int totalCost(String[] itemsInBasket) throws InvalidNumberOfMelonException, InvalidItemException {
+	public int totalCost(String[] itemsInBasket) throws FreeMelonRequiredException, InvalidItemException {
 		
 		createFruitGroupList(itemsInBasket);
 		return calculateTotalCostOfBasket();
 	}
 
-	private int calculateTotalCostOfBasket() throws InvalidNumberOfMelonException {
+	private int calculateTotalCostOfBasket() throws FreeMelonRequiredException {
 		
 		int totalCost = 0;
 		for(FruitGroup fruitGroup : fruitGroupList) {
