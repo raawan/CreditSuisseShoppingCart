@@ -1,4 +1,5 @@
-package com.creditsuisse.shopping;
+package com.creditsuisse.shopping.Data;
+
 
 public class FruitFactory {
 	

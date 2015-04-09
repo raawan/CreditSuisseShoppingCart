@@ -6,6 +6,10 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
+import com.creditsuisse.shopping.Data.FruitFactory;
+import com.creditsuisse.shopping.exception.InvalidItemException;
+import com.creditsuisse.shopping.exception.InvalidNumberOfMelonException;
+
 public class ShoppingBasketTest {
 	
 	ShoppingBasket shoppingBasket;

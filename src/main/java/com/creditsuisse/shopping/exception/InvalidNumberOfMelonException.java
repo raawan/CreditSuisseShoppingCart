@@ -1,4 +1,4 @@
-package com.creditsuisse.shopping;
+package com.creditsuisse.shopping.exception;
 
 public class InvalidNumberOfMelonException extends Exception {
 

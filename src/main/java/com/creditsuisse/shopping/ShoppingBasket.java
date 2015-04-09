@@ -3,14 +3,16 @@ package com.creditsuisse.shopping;
 import java.util.ArrayList;
 import java.util.List;
 
+import com.creditsuisse.shopping.Data.FruitFactory;
+import com.creditsuisse.shopping.Data.FruitGroup;
+import com.creditsuisse.shopping.exception.InvalidItemException;
+import com.creditsuisse.shopping.exception.InvalidNumberOfMelonException;
+
 
 public class ShoppingBasket {
 	
 	private List<FruitGroup> fruitGroupList = new ArrayList<FruitGroup>();
 	private FruitFactory fruitFactory;
-	private int totalMelons = 0;
-	private int totalApples = 0;
-	private int totalBananas = 0;
 	
 	ShoppingBasket(FruitFactory fruitFactory) {
 		this.fruitFactory = fruitFactory;
@@ -18,11 +20,11 @@ public class ShoppingBasket {
 	
 	public int totalCost(String[] itemsInBasket) throws InvalidNumberOfMelonException, InvalidItemException {
 		
-		createFruitList(itemsInBasket);
-		return calculateTotalCost();
+		createFruitGroupList(itemsInBasket);
+		return calculateTotalCostOfBasket();
 	}
 
-	private int calculateTotalCost() throws InvalidNumberOfMelonException {
+	private int calculateTotalCostOfBasket() throws InvalidNumberOfMelonException {
 		
 		int totalCost = 0;
 		for(FruitGroup fruitGroup : fruitGroupList) {
@@ -35,21 +37,22 @@ public class ShoppingBasket {
 		return totalCost;
 	}
 
-	private void createFruitList(String[] itemsInBasket) throws InvalidItemException {
-
+	private void createFruitGroupList(String[] itemsInBasket) throws InvalidItemException {
+		
+		int totalMelons = 0;
+		int totalApples = 0;
+		int totalBananas = 0;
+		
 		for(String item : itemsInBasket) {
 			item=item.toLowerCase();
 			switch(item) {
-				case "apple" 	: 	
-									totalApples++;
+				case "apple" : 		totalApples++;
 									break;
-				case "banana" 	: 	
-									totalBananas++;
+				case "banana": 		totalBananas++;
 									break;
-				case "melon"	: 	
-									totalMelons++;
+				case "melon" : 		totalMelons++;
 									break;
-				default			: 	throw new InvalidItemException("Invalid Item In the List");					
+				default		: 	throw new InvalidItemException("Invalid Item In the List");					
 			}
 		}
 		fruitGroupList.add(fruitFactory.createFruitGroup("Apples",totalApples));

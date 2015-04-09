@@ -1,10 +1,14 @@
-package com.creditsuisse.shopping;
+package com.creditsuisse.shopping.Data;
 
-import static com.creditsuisse.shopping.FruitPrice.MELON_PRICE;
+import static com.creditsuisse.shopping.constant.FruitPrice.MELON_PRICE;
+
+import com.creditsuisse.shopping.constant.FruitDiscount;
+import com.creditsuisse.shopping.constant.FruitPrice;
+import com.creditsuisse.shopping.exception.InvalidNumberOfMelonException;
 
 public class Melons extends FruitGroup {
 	
-	Melons(int melons) {
+	public Melons(int melons) {
 		
 		this.setPrice(FruitPrice.MELON_PRICE);
 		this.setTotalUnitsToBuyToGetFreeFruit(FruitDiscount.TOTAL_MELONS_TO_BUY_TO_GET_A_FREE_MELON);

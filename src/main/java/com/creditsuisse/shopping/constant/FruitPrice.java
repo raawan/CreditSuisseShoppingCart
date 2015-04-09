@@ -1,4 +1,4 @@
-package com.creditsuisse.shopping;
+package com.creditsuisse.shopping.constant;
 
 /*
  * This should ideally be a properties file

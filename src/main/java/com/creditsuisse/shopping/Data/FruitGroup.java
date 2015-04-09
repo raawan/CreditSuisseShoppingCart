@@ -1,4 +1,6 @@
-package com.creditsuisse.shopping;
+package com.creditsuisse.shopping.Data;
+
+import com.creditsuisse.shopping.exception.InvalidNumberOfMelonException;
 
 public abstract class FruitGroup {
 	

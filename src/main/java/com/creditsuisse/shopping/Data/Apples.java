@@ -1,10 +1,13 @@
-package com.creditsuisse.shopping;
+package com.creditsuisse.shopping.Data;
 
-import static com.creditsuisse.shopping.FruitPrice.APPLE_PRICE;
+import static com.creditsuisse.shopping.constant.FruitPrice.APPLE_PRICE;
+
+import com.creditsuisse.shopping.constant.FruitDiscount;
+import com.creditsuisse.shopping.constant.FruitPrice;
 
 public class Apples extends FruitGroup {
 	
-	Apples(int totalApples) {
+	public Apples(int totalApples) {
 		
 		this.setPrice(FruitPrice.APPLE_PRICE);
 		this.setTotalUnitsToBuyToGetFreeFruit(FruitDiscount.TOTAL_APPLES_TO_BUY_TO_GET_A_FREE_APPLE);
