@@ -18,10 +18,22 @@ public class Melons extends FruitGroup {
 	@Override
 	public int calculateTotalCostForThisFruitGroup() throws FreeMelonRequiredException {
 		
-		if(getTotalUnits()%(getTotalUnitsToBuyToGetFreeFruit()+1)!=0){
+		if(isFreeMelonNotAdded()){
 			throw new FreeMelonRequiredException("There is a free extra melon with every melon. Customer should get one more");
 		}
+		return costOfMelonsInTheBasket();
+	}
+
+
+	private int costOfMelonsInTheBasket() {
+		
 		return (getTotalUnits() /(getTotalUnitsToBuyToGetFreeFruit()+1)) * getPrice();
+	}
+
+
+	private boolean isFreeMelonNotAdded() {
+		
+		return getTotalUnits()%(getTotalUnitsToBuyToGetFreeFruit()+1)!=0;
 	}
 	
 }
