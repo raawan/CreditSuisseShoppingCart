@@ -15,7 +15,7 @@ public class Apples extends FruitGroup {
 	
 
 	@Override
-	public int calculateTotalCostForNunits() {
+	public int calculateTotalCostForThisFruitGroup() {
 		
 		return getTotalUnits()* getPrice();
 	}

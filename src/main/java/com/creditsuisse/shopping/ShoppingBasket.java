@@ -20,11 +20,7 @@ public class ShoppingBasket {
 		
 		int totalCost = 0;
 		for(FruitGroup fruitGroup : groupSimilarFruitsAndReturnAllGroupsInList(itemsInBasket)) {
-			if(fruitGroup == null) {
-				continue;
-			} else {
-				totalCost += fruitGroup.calculateTotalCostForNunits();
-			}
+				totalCost += fruitGroup.calculateTotalCostForThisFruitGroup();
 		}
 		return totalCost;
 	}

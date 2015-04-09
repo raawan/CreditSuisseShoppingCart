@@ -16,7 +16,7 @@ public class Melons extends FruitGroup {
 	
 
 	@Override
-	public int calculateTotalCostForNunits() throws FreeMelonRequiredException {
+	public int calculateTotalCostForThisFruitGroup() throws FreeMelonRequiredException {
 		
 		if(getTotalUnits()%(getTotalUnitsToBuyToGetFreeFruit()+1)!=0){
 			throw new FreeMelonRequiredException("There is a free extra melon with every melon. Customer should get one more");

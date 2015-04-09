@@ -34,5 +34,5 @@ public abstract class FruitGroup {
 		this.totalUnits = totalUnits;
 	}
 	
-	public abstract int calculateTotalCostForNunits() throws FreeMelonRequiredException, FreeLimeRequiredException;
+	public abstract int calculateTotalCostForThisFruitGroup() throws FreeMelonRequiredException, FreeLimeRequiredException;
 }
