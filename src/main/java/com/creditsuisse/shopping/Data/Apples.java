@@ -1,6 +1,5 @@
 package com.creditsuisse.shopping.Data;
 
-import static com.creditsuisse.shopping.constant.FruitPrice.APPLE_PRICE;
 
 import com.creditsuisse.shopping.constant.FruitDiscount;
 import com.creditsuisse.shopping.constant.FruitPrice;
@@ -23,7 +22,7 @@ public class Apples extends FruitGroup {
 	@Override
 	public int calculateTotalCostForNunits() {
 		
-		return getTotalUnits()* APPLE_PRICE;
+		return getTotalUnits()* getPrice();
 	}
 	
 }
