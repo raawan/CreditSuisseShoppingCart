@@ -1,4 +1,10 @@
-package com.creditsuisse.shopping.data;
+package com.creditsuisse.shopping.data.factory;
+
+import com.creditsuisse.shopping.data.Apples;
+import com.creditsuisse.shopping.data.Bananas;
+import com.creditsuisse.shopping.data.FruitGroup;
+import com.creditsuisse.shopping.data.Limes;
+import com.creditsuisse.shopping.data.Melons;
 
 
 public class FruitGroupFactory {

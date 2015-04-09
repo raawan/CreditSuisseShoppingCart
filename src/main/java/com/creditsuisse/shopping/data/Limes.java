@@ -3,7 +3,6 @@ package com.creditsuisse.shopping.data;
 import com.creditsuisse.shopping.constant.FruitDiscount;
 import com.creditsuisse.shopping.constant.FruitPrice;
 import com.creditsuisse.shopping.exception.FreeLimeRequiredException;
-import com.creditsuisse.shopping.exception.FreeMelonRequiredException;
 
 public class Limes extends FruitGroup {
 	

@@ -3,7 +3,7 @@ package com.creditsuisse.shopping;
 import java.util.List;
 
 import com.creditsuisse.shopping.data.FruitGroup;
-import com.creditsuisse.shopping.data.FruitGroupFactory;
+import com.creditsuisse.shopping.data.factory.FruitGroupFactory;
 import com.creditsuisse.shopping.exception.FreeLimeRequiredException;
 import com.creditsuisse.shopping.exception.InvalidItemException;
 import com.creditsuisse.shopping.exception.FreeMelonRequiredException;
