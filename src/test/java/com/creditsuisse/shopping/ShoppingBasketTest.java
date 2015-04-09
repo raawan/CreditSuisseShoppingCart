@@ -95,4 +95,11 @@ public class ShoppingBasketTest {
 		String itemsInBasket[] = {"Lime","Lime","Lime"};
 		assertEquals(30, shoppingBasket.totalCost(itemsInBasket));
 	}
+	
+	@Test
+	public void givenBasketWithSixLimesTotalCostReturnedShouldBe30p() throws InvalidItemException, InvalidNumberOfMelonException {
+		
+		String itemsInBasket[] = {"Lime","Lime","Lime","Lime","Lime","Lime"};
+		assertEquals(60, shoppingBasket.totalCost(itemsInBasket));
+	}
 }
