@@ -22,7 +22,7 @@ public class Limes extends FruitGroup {
 		} else if(IsThereAnExtraLimeAfterGroupingLimesInMultipleOfThrees()) {
 			return ((findHowManyLimeGroupsAreInMulipleOfThrees())*getDoublePrice()) + getPrice();
 		} 
-		return 0;
+		return 0; // this is not required
 	}
 
 	private boolean IsThereAnExtraLimeAfterGroupingLimesInMultipleOfThrees() {
