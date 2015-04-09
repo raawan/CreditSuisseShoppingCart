@@ -22,3 +22,16 @@ Assumptions:
 4) if there are odd number of melons an exception is thrown notifying an extra melon can be added free
 5) in case of lime if there is an excess lime in addition to multiples of three the cost of one lime is added to the total cost of lime.
    in case there are two limes in addition to the limes which are in multiples of three an exception is thrown depicting a free lime can be added to the basket.
+   
+   
+ Running the code : 
+ 
+ 1) Using maven
+ 	Download zip file from https://github.com/raawan/CreditSuisseShoppingCart
+ 	extract the file
+ 	run "mvn clean install"  
+ 	
+ 2) Download the attached file sent thru email
+ 	extract the file
+ 	Import the folder using Eclipse or any other IDE (Import as existing project into workspace if using eclipse)
+ 	run test cases 
