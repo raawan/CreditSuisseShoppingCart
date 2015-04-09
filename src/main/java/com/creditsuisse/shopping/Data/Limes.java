@@ -16,8 +16,11 @@ public class Limes extends FruitGroup {
 	@Override
 	public int calculateTotalCostForNunits()
 			throws InvalidNumberOfMelonException {
-		// TODO Auto-generated method stub
-		return 30;
+		
+		if(getTotalUnits()%3 == 0) {
+			return (getTotalUnits()/3)*getPrice()*2;
+		} 
+		return 0;
 	}
 
 }
