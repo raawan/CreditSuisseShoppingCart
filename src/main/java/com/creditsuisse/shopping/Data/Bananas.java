@@ -12,11 +12,6 @@ public class Bananas extends FruitGroup implements FruitPrice {
 		this.setTotalUnits(totalBananas);
 	}
 	
-	@Override
-	public String toString() {
-		
-		return "banana";
-	}
 
 	@Override
 	public int calculateTotalCostForNunits() {

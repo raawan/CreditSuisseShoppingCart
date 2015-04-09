@@ -13,11 +13,6 @@ public class Apples extends FruitGroup {
 		this.setTotalUnits(totalApples);
 	}
 	
-	@Override
-	public String toString() {
-		
-		return "apple";
-	}
 
 	@Override
 	public int calculateTotalCostForNunits() {

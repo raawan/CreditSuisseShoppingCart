@@ -42,6 +42,7 @@ public class ShoppingBasket {
 		int totalMelons = 0;
 		int totalApples = 0;
 		int totalBananas = 0;
+		int totalLimes = 0;
 		
 		for(String item : itemsInBasket) {
 			item=item.toLowerCase();
@@ -52,13 +53,15 @@ public class ShoppingBasket {
 									break;
 				case "melon" : 		totalMelons++;
 									break;
+				case "lime"	 :		totalLimes++;
+									break;
 				default		: 	throw new InvalidItemException("Invalid Item In the List");					
 			}
 		}
 		fruitGroupList.add(fruitFactory.createFruitGroup("Apples",totalApples));
 		fruitGroupList.add(fruitFactory.createFruitGroup("Bananas",totalBananas));
 		fruitGroupList.add(fruitFactory.createFruitGroup("Melons",totalMelons));
-		
+		fruitGroupList.add(fruitFactory.createFruitGroup("Limes",totalLimes));
 	}
 
 	

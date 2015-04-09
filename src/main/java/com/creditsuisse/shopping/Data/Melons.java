@@ -7,18 +7,13 @@ import com.creditsuisse.shopping.exception.InvalidNumberOfMelonException;
 
 public class Melons extends FruitGroup {
 	
-	public Melons(int melons) {
+	public Melons(int totalMelons) {
 		
 		this.setPrice(FruitPrice.MELON_PRICE);
 		this.setTotalUnitsToBuyToGetFreeFruit(FruitDiscount.TOTAL_MELONS_TO_BUY_TO_GET_A_FREE_MELON);
-		this.setTotalUnits(melons);
+		this.setTotalUnits(totalMelons);
 	}
 	
-	@Override
-	public String toString() {
-		
-		return "melon";
-	}
 
 	@Override
 	public int calculateTotalCostForNunits() throws InvalidNumberOfMelonException {

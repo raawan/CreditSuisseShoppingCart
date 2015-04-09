@@ -13,6 +13,7 @@ public class FruitFactory {
 			case "apples" 	: return new Apples(totalUnits);
 			case "bananas" 	: return new Bananas(totalUnits);
 			case "melons"	: return new Melons(totalUnits);
+			case "limes"	: return new Limes(totalUnits);
 			default			: return null;//ToDo : Null Object
 		}
 	}
