@@ -7,6 +7,7 @@ import org.junit.Before;
 import org.junit.Test;
 
 import com.creditsuisse.shopping.Data.FruitFactory;
+import com.creditsuisse.shopping.exception.FreeLimeRequiredException;
 import com.creditsuisse.shopping.exception.InvalidItemException;
 import com.creditsuisse.shopping.exception.FreeMelonRequiredException;
 
@@ -114,6 +115,13 @@ public class ShoppingBasketTest {
 	public void givenBasketWithOneLimeTotalCostReturnedShouldBe15p() throws InvalidItemException, FreeMelonRequiredException {
 		
 		String itemsInBasket[] = {"Lime"};
+		assertEquals(15, shoppingBasket.totalCost(itemsInBasket));
+	}
+	
+	@Test (expected=FreeLimeRequiredException.class)
+	public void givenBasketWithTwoLimesAnAdditionalLimeRequiredExceptionShouldBeThrown() throws InvalidItemException, FreeMelonRequiredException {
+		
+		String itemsInBasket[] = {"Lime","Lime"};
 		assertEquals(15, shoppingBasket.totalCost(itemsInBasket));
 	}
 }
