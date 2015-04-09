@@ -6,7 +6,7 @@ import java.util.List;
 
 public class ShoppingBasket {
 	
-	private List<Fruit> fruitGroupList = new ArrayList<Fruit>();
+	private List<FruitGroup> fruitGroupList = new ArrayList<FruitGroup>();
 	private FruitFactory fruitFactory;
 	private int totalMelons = 0;
 	private int totalApples = 0;
@@ -25,7 +25,7 @@ public class ShoppingBasket {
 	private int calculateTotalCost() throws InvalidNumberOfMelonException {
 		
 		int totalCost = 0;
-		for(Fruit fruitGroup : fruitGroupList) {
+		for(FruitGroup fruitGroup : fruitGroupList) {
 			if(fruitGroup == null) {
 				continue;
 			} else {

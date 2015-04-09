@@ -2,7 +2,7 @@ package com.creditsuisse.shopping;
 
 import static com.creditsuisse.shopping.FruitPrice.APPLE_PRICE;
 
-public class Apples extends Fruit {
+public class Apples extends FruitGroup {
 	
 	Apples(int totalApples) {
 		

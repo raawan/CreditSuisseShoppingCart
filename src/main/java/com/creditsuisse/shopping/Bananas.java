@@ -1,6 +1,6 @@
 package com.creditsuisse.shopping;
 
-public class Bananas extends Fruit implements FruitPrice {
+public class Bananas extends FruitGroup implements FruitPrice {
 	
 	Bananas(int totalBananas) {
 		

@@ -2,7 +2,7 @@ package com.creditsuisse.shopping;
 
 public class FruitFactory {
 	
-	public Fruit createFruitGroup(String fruit, int totalUnits) {
+	public FruitGroup createFruitGroup(String fruit, int totalUnits) {
 		
 		if(totalUnits <= 0) {
 			return null;//ToDo : Null Object

@@ -1,6 +1,6 @@
 package com.creditsuisse.shopping;
 
-public abstract class Fruit {
+public abstract class FruitGroup {
 	
 	private int price;
 	private int totalUnitsToBuyToGetFreeFruit;
