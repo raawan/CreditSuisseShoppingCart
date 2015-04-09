@@ -12,6 +12,7 @@ Items are priced as follows:
  
 Given a list of shopping, calculate the total cost of those items.
 
+Language Used : Core Java [1.7]
 
 Assumptions:
 
