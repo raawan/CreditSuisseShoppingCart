@@ -1,7 +1,7 @@
-package com.creditsuisse.shopping.Data;
+package com.creditsuisse.shopping.data;
 
 
-public class FruitFactory {
+public class FruitGroupFactory {
 	
 	public FruitGroup createFruitGroup(String fruit, int totalUnits) {
 		

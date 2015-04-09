@@ -1,4 +1,4 @@
-package com.creditsuisse.shopping.Data;
+package com.creditsuisse.shopping.data;
 
 import com.creditsuisse.shopping.exception.FreeLimeRequiredException;
 import com.creditsuisse.shopping.exception.FreeMelonRequiredException;

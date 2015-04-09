@@ -3,15 +3,15 @@ package com.creditsuisse.shopping;
 import java.util.ArrayList;
 import java.util.List;
 
-import com.creditsuisse.shopping.Data.FruitFactory;
-import com.creditsuisse.shopping.Data.FruitGroup;
+import com.creditsuisse.shopping.data.FruitGroup;
+import com.creditsuisse.shopping.data.FruitGroupFactory;
 import com.creditsuisse.shopping.exception.InvalidItemException;
 
 public class ShoppingBasketHelper {
 	
-	private FruitFactory fruitFactory;
+	private FruitGroupFactory fruitFactory;
 	
-	ShoppingBasketHelper(FruitFactory fruitFactory) {
+	ShoppingBasketHelper(FruitGroupFactory fruitFactory) {
 		
 		this.fruitFactory = fruitFactory;
 	}

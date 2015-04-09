@@ -2,8 +2,8 @@ package com.creditsuisse.shopping;
 
 import java.util.List;
 
-import com.creditsuisse.shopping.Data.FruitFactory;
-import com.creditsuisse.shopping.Data.FruitGroup;
+import com.creditsuisse.shopping.data.FruitGroup;
+import com.creditsuisse.shopping.data.FruitGroupFactory;
 import com.creditsuisse.shopping.exception.FreeLimeRequiredException;
 import com.creditsuisse.shopping.exception.InvalidItemException;
 import com.creditsuisse.shopping.exception.FreeMelonRequiredException;
@@ -32,7 +32,7 @@ public class ShoppingBasket {
 	private List<FruitGroup> groupSimilarFruitsAndReturnAllGroupsInList(
 			String[] itemsInBasket) throws InvalidItemException {
 		
-		return new ShoppingBasketHelper(new FruitFactory()).createFruitGroupList(itemsInBasket);
+		return new ShoppingBasketHelper(new FruitGroupFactory()).createFruitGroupList(itemsInBasket);
 	}
 
 }
