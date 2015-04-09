@@ -16,7 +16,7 @@ public class Limes extends FruitGroup {
 
 	@Override
 	public int calculateTotalCostForNunits()
-			throws FreeMelonRequiredException, FreeLimeRequiredException {
+			throws FreeLimeRequiredException {
 		
 		if(areTotalLimesInMultipleOfThrees()) {
 			return (findHowManyLimeGroupsAreInMulipleOfThrees())*getDoublePrice();

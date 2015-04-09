@@ -6,7 +6,6 @@ import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.creditsuisse.shopping.Data.FruitFactory;
 import com.creditsuisse.shopping.exception.FreeLimeRequiredException;
 import com.creditsuisse.shopping.exception.InvalidItemException;
 import com.creditsuisse.shopping.exception.FreeMelonRequiredException;
@@ -18,7 +17,7 @@ public class ShoppingBasketTest {
 	@Before
 	public void setup() {
 		
-		shoppingBasket = new ShoppingBasket(new FruitFactory());
+		shoppingBasket = new ShoppingBasket();
 	}
 	
 	@After
