@@ -18,13 +18,24 @@ public class Limes extends FruitGroup {
 			throws FreeLimeRequiredException {
 		
 		if(areTotalLimesInMultipleOfThrees()) {
-			return (findHowManyLimeGroupsAreInMulipleOfThrees())*getDoublePrice();
-		} else if(IsThereAnExtraLimeAfterGroupingLimesInMultipleOfThrees()) {
+			return calculateCostOnLimesWhichAreInMultipleOfThrees();
+		} else {
+			return calculateCostOnExtraLimesInAdditionToLimesWhichAreMultipleOfThrees();
+		}
+	}
+
+	private int calculateCostOnLimesWhichAreInMultipleOfThrees() {
+		
+		return findHowManyLimeGroupsAreInMulipleOfThrees()*getDoublePrice();
+	}
+
+	private int calculateCostOnExtraLimesInAdditionToLimesWhichAreMultipleOfThrees() throws FreeLimeRequiredException {
+		
+		if(IsThereAnExtraLimeAfterGroupingLimesInMultipleOfThrees()) {
 			return ((findHowManyLimeGroupsAreInMulipleOfThrees())*getDoublePrice()) + getPrice();
 		} else {
 			throw new FreeLimeRequiredException("there is a free lime on every two lime bought. ");
 		} 
-		
 	}
 
 	private boolean IsThereAnExtraLimeAfterGroupingLimesInMultipleOfThrees() {
