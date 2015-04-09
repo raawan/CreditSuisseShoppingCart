@@ -17,10 +17,17 @@ public class Limes extends FruitGroup {
 	public int calculateTotalCostForNunits()
 			throws InvalidNumberOfMelonException {
 		
-		if(getTotalUnits()%3 == 0) {
+		if(areTotalLimesInMultipleOfThrees()) {
 			return (getTotalUnits()/3)*getPrice()*2;
+		} else if(getTotalUnits()%3 == 1) {
+			return ((getTotalUnits()/3)*getPrice()*2) + getPrice();
 		} 
 		return 0;
+	}
+
+	private boolean areTotalLimesInMultipleOfThrees() {
+		
+		return getTotalUnits()%3 == 0;
 	}
 
 }
