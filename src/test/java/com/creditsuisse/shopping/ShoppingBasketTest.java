@@ -16,7 +16,7 @@ public class ShoppingBasketTest {
 		
 		String itemsInBasket[] = {"Apple"};
 		ShoppingBasket shoppingBasket = constructShoppingBasket(itemsInBasket);
-		assertEquals(35, shoppingBasket.totalCost(itemsInBasket));
+		assertEquals(35, shoppingBasket.totalCost());
 	}
 	
 	
@@ -31,7 +31,7 @@ public class ShoppingBasketTest {
 		
 		String itemsInBasket[] = {"Apple","Apple"};
 		ShoppingBasket shoppingBasket = constructShoppingBasket(itemsInBasket);
-		assertEquals(70, shoppingBasket.totalCost(itemsInBasket));
+		assertEquals(70, shoppingBasket.totalCost());
 	}
 	
 	@Test
@@ -39,7 +39,7 @@ public class ShoppingBasketTest {
 		
 		String itemsInBasket[] = {"Apple","Banana","Apple"};
 		ShoppingBasket shoppingBasket = constructShoppingBasket(itemsInBasket);
-		assertEquals(90, shoppingBasket.totalCost(itemsInBasket));
+		assertEquals(90, shoppingBasket.totalCost());
 	}
 	
 	@Test
@@ -47,7 +47,7 @@ public class ShoppingBasketTest {
 		
 		String itemsInBasket[] = {"Apple","Banana","Apple","Melon","Melon"};
 		ShoppingBasket shoppingBasket = constructShoppingBasket(itemsInBasket);
-		assertEquals(140, shoppingBasket.totalCost(itemsInBasket));
+		assertEquals(140, shoppingBasket.totalCost());
 	}
 	
 	@Test (expected=InvalidItemException.class)
@@ -55,7 +55,7 @@ public class ShoppingBasketTest {
 		
 		String itemsInBasket[] = {"Apple","Banana","Apple","invalidItem"};
 		ShoppingBasket shoppingBasket = constructShoppingBasket(itemsInBasket);
-		shoppingBasket.totalCost(itemsInBasket);
+		shoppingBasket.totalCost();
 	}
 	
 	@Test (expected=FreeMelonRequiredException.class)
@@ -63,7 +63,7 @@ public class ShoppingBasketTest {
 		
 		String itemsInBasket[] = {"Melon","Melon","Melon"};
 		ShoppingBasket shoppingBasket = constructShoppingBasket(itemsInBasket);
-		shoppingBasket.totalCost(itemsInBasket);
+		shoppingBasket.totalCost();
 	}
 	
 	@Test (expected=FreeMelonRequiredException.class)
@@ -71,7 +71,7 @@ public class ShoppingBasketTest {
 		
 		String itemsInBasket[] = {"Melon"};
 		ShoppingBasket shoppingBasket = constructShoppingBasket(itemsInBasket);
-		shoppingBasket.totalCost(itemsInBasket);
+		shoppingBasket.totalCost();
 	}
 	
 	@Test
@@ -79,7 +79,7 @@ public class ShoppingBasketTest {
 		
 		String itemsInBasket[] = {"Melon","Melon","Melon","Melon"};
 		ShoppingBasket shoppingBasket = constructShoppingBasket(itemsInBasket);
-		assertEquals(100, shoppingBasket.totalCost(itemsInBasket));
+		assertEquals(100, shoppingBasket.totalCost());
 	}
 	
 	@Test
@@ -87,7 +87,7 @@ public class ShoppingBasketTest {
 		
 		String itemsInBasket[] = {};
 		ShoppingBasket shoppingBasket = constructShoppingBasket(itemsInBasket);
-		assertEquals(0, shoppingBasket.totalCost(itemsInBasket));
+		assertEquals(0, shoppingBasket.totalCost());
 	}
 	
 	@Test
@@ -95,7 +95,7 @@ public class ShoppingBasketTest {
 		
 		String itemsInBasket[] = {"Lime","Lime","Lime"};
 		ShoppingBasket shoppingBasket = constructShoppingBasket(itemsInBasket);
-		assertEquals(30, shoppingBasket.totalCost(itemsInBasket));
+		assertEquals(30, shoppingBasket.totalCost());
 	}
 	
 	@Test
@@ -103,7 +103,7 @@ public class ShoppingBasketTest {
 		
 		String itemsInBasket[] = {"Lime","Lime","Lime","Lime","Lime","Lime"};
 		ShoppingBasket shoppingBasket = constructShoppingBasket(itemsInBasket);
-		assertEquals(60, shoppingBasket.totalCost(itemsInBasket));
+		assertEquals(60, shoppingBasket.totalCost());
 	}
 	
 	@Test
@@ -111,7 +111,7 @@ public class ShoppingBasketTest {
 		
 		String itemsInBasket[] = {"Lime","Lime","Lime","Lime","Lime","Lime","Lime"};
 		ShoppingBasket shoppingBasket = constructShoppingBasket(itemsInBasket);
-		assertEquals(75, shoppingBasket.totalCost(itemsInBasket));
+		assertEquals(75, shoppingBasket.totalCost());
 	}
 	
 	@Test
@@ -119,7 +119,7 @@ public class ShoppingBasketTest {
 		
 		String itemsInBasket[] = {"Lime"};
 		ShoppingBasket shoppingBasket = constructShoppingBasket(itemsInBasket);
-		assertEquals(15, shoppingBasket.totalCost(itemsInBasket));
+		assertEquals(15, shoppingBasket.totalCost());
 	}
 	
 	@Test (expected=FreeLimeRequiredException.class)
@@ -127,7 +127,7 @@ public class ShoppingBasketTest {
 		
 		String itemsInBasket[] = {"Lime","Lime"};
 		ShoppingBasket shoppingBasket = constructShoppingBasket(itemsInBasket);
-		assertEquals(15, shoppingBasket.totalCost(itemsInBasket));
+		assertEquals(15, shoppingBasket.totalCost());
 	}
 	
 	@Test
@@ -135,6 +135,6 @@ public class ShoppingBasketTest {
 		
 		String itemsInBasket[] = {"Lime","Lime","Lime","Lime","Melon","Melon","Banana","Banana","Apple","Apple"};
 		ShoppingBasket shoppingBasket = constructShoppingBasket(itemsInBasket);
-		assertEquals(205, shoppingBasket.totalCost(itemsInBasket));
+		assertEquals(205, shoppingBasket.totalCost());
 	}
 }

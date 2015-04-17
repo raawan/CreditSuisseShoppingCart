@@ -19,20 +19,15 @@ public class ShoppingBasket {
 	}
 	
 	
-	public int totalCost(String[] itemsInBasket) throws FreeMelonRequiredException, InvalidItemException, FreeLimeRequiredException {
-		
-		return calculateTotalCostOfBasket(itemsInBasket);
-	}
-
-	private int calculateTotalCostOfBasket(String[] itemsInBasket) throws FreeMelonRequiredException, FreeLimeRequiredException, InvalidItemException {
+	public int totalCost() throws FreeMelonRequiredException, InvalidItemException, FreeLimeRequiredException {
 		
 		int totalCost = 0;
-		
 		for(FruitGroup fruitGroup : fruitGroups) {
 				totalCost += fruitGroup.calculateTotalCostForThisFruitGroup();
 		}
 		return totalCost;
 	}
+
 
 	private List<FruitGroup> groupSimilarFruitsAndReturnAllGroupsInList(
 			String[] itemsInBasket) throws InvalidItemException {
