@@ -11,6 +11,14 @@ import com.creditsuisse.shopping.exception.FreeMelonRequiredException;
 
 public class ShoppingBasket {
 	
+	private List<FruitGroup> fruitGroups;
+	
+	public ShoppingBasket(String[] itemsInBasket) throws InvalidItemException {
+		
+		fruitGroups = groupSimilarFruitsAndReturnAllGroupsInList(itemsInBasket);
+	}
+	
+	
 	public int totalCost(String[] itemsInBasket) throws FreeMelonRequiredException, InvalidItemException, FreeLimeRequiredException {
 		
 		return calculateTotalCostOfBasket(itemsInBasket);
@@ -19,7 +27,8 @@ public class ShoppingBasket {
 	private int calculateTotalCostOfBasket(String[] itemsInBasket) throws FreeMelonRequiredException, FreeLimeRequiredException, InvalidItemException {
 		
 		int totalCost = 0;
-		for(FruitGroup fruitGroup : groupSimilarFruitsAndReturnAllGroupsInList(itemsInBasket)) {
+		
+		for(FruitGroup fruitGroup : fruitGroups) {
 				totalCost += fruitGroup.calculateTotalCostForThisFruitGroup();
 		}
 		return totalCost;
@@ -30,6 +39,15 @@ public class ShoppingBasket {
 		
 		return new ShoppingBasketHelper(new FruitGroupFactory()).createFruitGroupList(itemsInBasket);
 	}
+
+	public List<FruitGroup> getFruitGroups() {
+		return fruitGroups;
+	}
+
+	public void setFruitGroups(List<FruitGroup> fruitGroups) {
+		this.fruitGroups = fruitGroups;
+	}
+
 
 }
  
