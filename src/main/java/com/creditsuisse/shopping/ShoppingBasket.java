@@ -20,7 +20,7 @@ public class ShoppingBasket {
 		fruitGroups = groupSimilarFruitsAndReturnAllGroupsInList(itemsInBasket);
 	}
 	
-	
+
 	public int totalCost() throws FreeMelonRequiredException, InvalidItemException, FreeLimeRequiredException {
 		
 		for(FruitGroup fruitGroup : fruitGroups) {
@@ -49,7 +49,6 @@ public class ShoppingBasket {
 	public void setTotalCost(int totalCost) {
 		this.totalCost = totalCost;
 	}
-
 
 }
  
